@@ -1,4 +1,5 @@
 #!bin/bash
 $ chmod ugo+x homework_rain
 
-echo New way for me
+echo Hello! My name is Rain
+echo This is my first project on Bash

@@ -1,0 +1,4 @@
+#!bin/bash
+$ chmod ugo+x homework_rain
+
+echo New way for me

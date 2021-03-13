@@ -1,7 +1,6 @@
 #!bin/bash
-.gitignore
-chmod ugo+x homework.sh
-chmod +x ./homework.sh
 
-echo Hello! My name is Rain
-echo This is my first project on Bash
+chmod +x homework_rain.sh
+
+echo "Hello! My name is Rain"
+echo "This is my first project on Bash"

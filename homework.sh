@@ -7,4 +7,4 @@ pip install flask
 pip freeze > requirements.txt
 
 echo "Hello! My name is Rain"
-exit
+echo "This is my first project on Bash"

@@ -248,23 +248,23 @@ def cache(max_limit=64):
                 deco._cache_entries[args] = heap_node
 
             def delete_content_from_cache():
-                while deco._heap:
+                if deco._heap:
                     count, args, content = heapq.heappop(deco._heap)
                     del deco._cache_entries[args]
-                    return
 
             def update_frequency_in_cache(*args):
                 heap_node = deco._cache_entries[args]
                 heap_node[0] = heap_node[0] + 1
-                heapq.heappush(deco._heap, heap_node)
+                #heapq.heappush(deco._heap, heap_node)
+                heapq.heapify(deco._heap)
                 deco._cache_entries[args] = heap_node
 
             if args in deco._cache_entries:
                 print(*args, "in cache")
-                update_frequency_in_cache(args)
+                update_frequency_in_cache(*args)
             else:
                 print(*args, "not in cache")
-                add_content_in_cache(args)
+                add_content_in_cache(*args)
 
             return deco._cache_entries[args][2]
         deco._cache_entries = {}
